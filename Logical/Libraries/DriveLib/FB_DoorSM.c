@@ -20,7 +20,7 @@ void FB_DoorSM(struct FB_DoorSM* inst)
 			}
 		case ST_UNKNOWN:
 			{
-				if(inst->direction == 0 && inst->sw0 == 0) inst->state = ST_OPEN;
+				if(inst->direction == 0 && inst->sw0 == 1) inst->state = ST_OPEN;
 				if(inst->direction == 1 && inst->sw3 == 1) inst->state = ST_CLOSE;
 				break;
 			}
@@ -46,21 +46,21 @@ void FB_DoorSM(struct FB_DoorSM* inst)
 		case ST_ACC_NEG:
 			{
 				inst->speed = -200;
-				if(inst->sw2 == 0) inst->state = ST_NEG;
+				if(inst->sw2 == 1) inst->state = ST_NEG;
 				if(inst->direction == 0) inst->state = ST_DEC_POS;
 				break;
 			}
 		case ST_POS:
 			{
-				inst->speed = 100;
+				inst->speed = 400;
 				if(inst->sw2 == 1) inst->state = ST_DEC_POS;
 				if(inst->direction == 1) inst->state = ST_NEG;
 				break;
 			}
 		case ST_NEG:
 			{
-				inst->speed = -100;
-				if(inst->sw2 == 0) inst->state = ST_DEC_NEG;
+				inst->speed = -400;
+				if(inst->sw1 == 1) inst->state = ST_DEC_NEG;
 				if(inst->direction == 0) inst->state = ST_POS;
 				break;
 			}
@@ -73,7 +73,7 @@ void FB_DoorSM(struct FB_DoorSM* inst)
 		case ST_DEC_NEG:
 			{
 				inst->speed = -100;
-				if(inst->sw3 == 0) inst->state = ST_OPEN;
+				if(inst->sw0 == 1) inst->state = ST_OPEN;
 				break;
 			}
 	}

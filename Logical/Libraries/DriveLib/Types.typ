@@ -2,9 +2,9 @@
 TYPE
 	ER_State : 
 		( (*Motor states*)
-		ST_READY, (*Ready to work*)
-		ST_DISABLE, (*Disable*)
-		ST_SWITCHED_ON (*Switching states*)
+		ST_READY := 33, (*Ready to work*)
+		ST_DISABLE := 64, (*Disable*)
+		ST_SWITCHED_ON := 35 (*Switching states*)
 		);
 	ER_DoorState : 
 		( (*Door states*)
@@ -21,9 +21,9 @@ TYPE
 		);
 	ER_Command : 
 		( (*Motor commands*)
-		CMD_SWITCH_ON, (*Switching motor*)
-		CMD_ENABLE, (*Turning on the motor*)
-		CMD_SHUTDOWN, (*Motor shutdown*)
-		CMD_DISABLE (*Motor disable*)
+		CMD_SWITCH_ON := 7, (*Switching motor*)
+		CMD_ENABLE := 15, (*Turning on the motor*)
+		CMD_SHUTDOWN := 6, (*Motor shutdown*)
+		CMD_DISABLE := 0 (*Motor disable*)
 		);
 END_TYPE

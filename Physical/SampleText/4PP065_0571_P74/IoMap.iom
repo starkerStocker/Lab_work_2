@@ -13,7 +13,7 @@ VAR_CONFIG
 	::Program:ledSM.led3 AT %QX."X20DO9322".DigitalOutput05;
 	::Program:doorSM.direction AT %IX."X20DI9371".DigitalInput01;
 	::Program:doorSM.sw0 AT %IX."X20DI9371".DigitalInput02;
-	::Program:ledSM.led1 AT %IX."X20DI9371".DigitalInput03;
+	::Program:doorSM.sw1 AT %IX."X20DI9371".DigitalInput03;
 	::Program:doorSM.sw2 AT %IX."X20DI9371".DigitalInput04;
 	::Program:doorSM.sw3 AT %IX."X20DI9371".DigitalInput05;
 END_VAR

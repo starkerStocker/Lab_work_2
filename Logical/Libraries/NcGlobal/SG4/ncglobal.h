@@ -1,14 +1,5 @@
-/****************************************************************************
-*                    B & R   P O S I T I O N I N G                          *
-*****************************************************************************
-*                                                                           *
-*            Header File for Library NCGLOBAL (Version 3162)                * 
-*                                                                           *
-**************************** COPYRIGHT (C) **********************************
-*     THIS SOFTWARE IS THE PROPERTY OF B&R AUSTRIA: ALL RIGHTS RESERVED.    *
-*     NO PART OF THIS SOFTWARE MAY BE USED OR COPIED IN ANY WAY WITHOUT     *
-*              THE PRIOR WRITTEN PERMISSION OF B&R AUSTRIA.                 *
-****************************************************************************/
+/* ncglobal.h V5.02.1 */ 
+/* COPYRIGHT (C) B&R Industrial Automation GmbH */ 
 
 /* Automation Studio generated header file */
 /* Do not edit ! */
@@ -204,6 +195,7 @@
  #define ncACOPOSmicro 7U
  #define ncACOPOSmotor 4U
  #define ncACOPOSmulti 5U
+ #define ncACOPOSmulti_3 9U
  #define ncACOPOSmulti_PPS 6U
  #define ncACOPOSmulti65 8U
  #define ncACOPOSmulti65m 4U
@@ -597,6 +589,7 @@
  #define ncQUADRATIC 2U
  #define ncQUADRATIC_NO_OVERSHOOT 4U
  #define ncQUICKSTOP 2U
+ #define ncQUICKSTOP_T_JOLT 2U
  #define ncR_PAR 23U
  #define ncR_PARAM 211U
  #define ncR_PARTAB 210U
@@ -656,7 +649,9 @@
  #define ncSIGNAL4 94U
  #define ncSIM_1MASS 1U
  #define ncSIM_1MASS_AUTO 0U
+ #define ncSIM_1MASS_GEAR 3U
  #define ncSIM_2MASS 2U
+ #define ncSIM_2MASS_GEAR 4U
  #define ncSIM_START 127U
  #define ncSIMULAT 150U
  #define ncSIMULATION 150U
@@ -747,6 +742,7 @@
  #define ncTRQ_LIMIT 30U
  #define ncTRUE 1U
  #define ncTUNE_STANDSTILL 0U
+ #define ncTUNE_TN 16U
  #define ncTUNE_V_CONSTANT 1U
  #define ncU_LIMIT 40U
  #define ncU_SET 13U
@@ -976,6 +972,7 @@
  _IEC_CONST unsigned char ncACOPOSmicro = 7U;
  _IEC_CONST unsigned char ncACOPOSmotor = 4U;
  _IEC_CONST unsigned char ncACOPOSmulti = 5U;
+ _IEC_CONST unsigned char ncACOPOSmulti_3 = 9U;
  _IEC_CONST unsigned char ncACOPOSmulti_PPS = 6U;
  _IEC_CONST unsigned char ncACOPOSmulti65 = 8U;
  _IEC_CONST unsigned char ncACOPOSmulti65m = 4U;
@@ -1369,6 +1366,7 @@
  _IEC_CONST unsigned char ncQUADRATIC = 2U;
  _IEC_CONST unsigned char ncQUADRATIC_NO_OVERSHOOT = 4U;
  _IEC_CONST unsigned char ncQUICKSTOP = 2U;
+ _IEC_CONST unsigned char ncQUICKSTOP_T_JOLT = 2U;
  _IEC_CONST unsigned char ncR_PAR = 23U;
  _IEC_CONST unsigned short ncR_PARAM = 211U;
  _IEC_CONST unsigned short ncR_PARTAB = 210U;
@@ -1428,7 +1426,9 @@
  _IEC_CONST unsigned char ncSIGNAL4 = 94U;
  _IEC_CONST unsigned short ncSIM_1MASS = 1U;
  _IEC_CONST unsigned short ncSIM_1MASS_AUTO = 0U;
+ _IEC_CONST unsigned short ncSIM_1MASS_GEAR = 3U;
  _IEC_CONST unsigned short ncSIM_2MASS = 2U;
+ _IEC_CONST unsigned short ncSIM_2MASS_GEAR = 4U;
  _IEC_CONST unsigned char ncSIM_START = 127U;
  _IEC_CONST unsigned short ncSIMULAT = 150U;
  _IEC_CONST unsigned short ncSIMULATION = 150U;
@@ -1519,6 +1519,7 @@
  _IEC_CONST unsigned char ncTRQ_LIMIT = 30U;
  _IEC_CONST unsigned char ncTRUE = 1U;
  _IEC_CONST unsigned char ncTUNE_STANDSTILL = 0U;
+ _IEC_CONST unsigned short ncTUNE_TN = 16U;
  _IEC_CONST unsigned char ncTUNE_V_CONSTANT = 1U;
  _IEC_CONST unsigned char ncU_LIMIT = 40U;
  _IEC_CONST unsigned char ncU_SET = 13U;
